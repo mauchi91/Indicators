@@ -21,7 +21,7 @@ public class TDSequential : Indicator
 	#region Static and constants
 
 	private const int _barsNum = 4;
-	private const int _maxSignalNum = 9;
+	private const int _maxSignalNum = 8;
 
 	#endregion
 
@@ -413,7 +413,7 @@ public class TDSequential : Indicator
 			var tag = isUp ? $"{bar}+" : $"{bar}";
 			var textSize = GetTextSize(tdValue);
 			var offsetY = GetLabelOffsetY(isUp, (int)textSize) * series.Width;
-            var borderColor = tdValue == 9 ? color : System.Drawing.Color.Transparent;
+            var borderColor = tdValue == 8 ? color : System.Drawing.Color.Transparent;
 
             AddText(tag, tdValue.ToString(CultureInfo.InvariantCulture), !isUp, bar, markerPlace, offsetY, 0,
 				 color, borderColor, System.Drawing.Color.Transparent, textSize, DrawingText.TextAlign.Center);
